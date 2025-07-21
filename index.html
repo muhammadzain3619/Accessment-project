@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my project</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="hero-section">
+      <!-- Navbar -->
+<nav class="w-full flex justify-between items-center px-6 py-4 bg-transparent absolute top-0 z-50 border-b border-white/20">
+  <!-- Logo -->
+  <img
+    class="h-16 w-16"
+    src="https://tripptheme.com/tripp3/wp-content/uploads/2023/02/logo-x2-light.png"
+    alt="logo"
+  />
+
+  <!-- Center Navigation (hidden on small screens) -->
+  <ul class="flex gap-8 items-center text-lg relative text-white">
+    
+    <!-- HOME (no dropdown) -->
+    <li><a href="#" class="hover:text-blue-400">HOME</a></li>
+
+    <!-- EXPLORE (dropdown) -->
+    <li class="relative group">
+      <a href="#" class="hover:text-blue-400">EXPLORE</a>
+      
+      <!-- EXPLORE DROPDOWN -->
+      <div class="absolute left-0 top-full mt-4 w-[1000px] max-w-6xl bg-white text-black shadow-lg rounded-md p-6 hidden group-hover:flex z-50">
+        
+        <!-- Sidebar -->
+        <div class="w-1/4 pr-6 border-r border-gray-300">
+          <ul class="space-y-4 text-base">
+            <li class="cursor-pointer hover:font-semibold">Coast</li>
+            <li class="cursor-pointer hover:font-semibold">Landmark</li>
+            <li class="cursor-pointer hover:font-semibold">Lake</li>
+            <li class="cursor-pointer hover:font-semibold">Mountain</li>
+          </ul>
+        </div>
+
+        <!-- Cards -->
+        <div class="w-3/4 grid grid-cols-4 gap-4 pl-6">
+          <div class="rounded-xl overflow-hidden shadow">
+            <img src="https://tripptheme.com/tripp3/wp-content/uploads/2023/01/post-02-2-720x720.jpg" class="w-full h-40 object-cover" />
+            <div class="p-3 font-semibold">Long Beachside</div>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow">
+            <img src="https://tripptheme.com/tripp3/wp-content/uploads/2023/01/post-03-2-720x720.jpg" class="w-full h-40 object-cover" />
+            <div class="p-3 font-semibold">White Sea Cabin</div>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow">
+            <img src="https://tripptheme.com/tripp3/wp-content/uploads/2023/01/post-08-3-1152x1536.jpg" class="w-full h-40 object-cover" />
+            <div class="p-3 font-semibold">Waves of Hawaii</div>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow">
+            <img src="https://tripptheme.com/tripp3/wp-content/uploads/2023/01/post-28.jpg" class="w-full h-40 object-cover" />
+            <div class="p-3 font-semibold">Maldives Beauty</div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <!-- DESTINATIONS (dropdown) -->
+    <li class="relative group">
+      <a href="#" class="hover:text-blue-400">DESTINATIONS</a>
+      
+      <!-- DESTINATIONS DROPDOWN -->
+      <div class="absolute left-0 top-full mt-4 w-[1000px] max-w-6xl bg-white text-black shadow-lg rounded-md p-6 hidden group-hover:flex z-50">
+        
+        <!-- Sidebar -->
+        <div class="w-1/4 pr-6 border-r border-gray-300">
+          <ul class="space-y-4 text-base">
+            <li class="cursor-pointer hover:font-semibold">Africa</li>
+            <li class="cursor-pointer hover:font-semibold">Asia</li>
+            <li class="cursor-pointer hover:font-semibold">Europe</li>
+            <li class="cursor-pointer hover:font-semibold">South America</li>
+          </ul>
+        </div>
+
+        <!-- Cards -->
+        <div class="w-3/4 grid grid-cols-4 gap-4 pl-6">
+          <div class="rounded-xl overflow-hidden shadow">
+            <img src="https://tripptheme.com/tripp3/wp-content/uploads/2023/01/post-30-2-720x720.jpg" class="w-full h-40 object-cover" />
+            <div class="p-3 font-semibold">Cape Town</div>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow">
+            <img src="https://tripptheme.com/tripp3/wp-content/uploads/2023/02/post-35-720x720.jpg" class="w-full h-40 object-cover" />
+            <div class="p-3 font-semibold">Desert Trails</div>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow">
+            <img src="https://tripptheme.com/tripp3/wp-content/uploads/2022/12/post-33-720x720.jpg" class="w-full h-40 object-cover" />
+            <div class="p-3 font-semibold">High Mountains</div>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow">
+            <img src="https://tripptheme.com/tripp3/wp-content/uploads/2023/02/post-37-2.jpg" class="w-full h-40 object-cover" />
+            <div class="p-3 font-semibold">Egyptian Pyramids</div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <!-- ABOUT (no dropdown) -->
+    <li><a href="#" class="hover:text-blue-400">ABOUT</a></li>
+
+    <!-- CONTACT (no dropdown) -->
+    <li><a href="#" class="hover:text-blue-400">CONTACT</a></li>
+
+  </ul>
+
+  <div id="search-input-container " class="hidden md:flex w-full max-w-md justify-center ">
+    <input
+      type="text"
+      placeholder="Start typing..."
+      class="w-full px-4 py-2 rounded-md text-black outline-none "
+    />
+  </div>
+
+  <!-- Right Icons -->
+  <div class="flex items-center gap-8">
+    <!-- Search Icon -->
+    <svg
+      id="search-btn"
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-6 h-6 text-white cursor-pointer"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"
+      />
+    </svg>
+
+     <!-- Back Button (hidden initially) -->
+    <button id="back-btn" class="hidden text-white text-2xl font-bold">&times;</button>
+
+    <!-- Drawer Toggle Button -->
+    <button id="drawer-toggle" class="block md:show focus:outline-none">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-8 h-8 text-white"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Right Drawer -->
+<div
+  id="drawer"
+  class="fixed top-0 right-0 h-full w-64 bg-white text-black shadow-lg transform translate-x-full transition-transform duration-300 z-50"
+>
+  <div class="flex justify-between items-center px-4 py-4 border-b">
+    <h2 class="text-xl font-semibold">Menu</h2>
+    <button id="drawer-close" class="text-gray-600 hover:text-black text-2xl">&times;</button>
+  </div>
+  <ul class="flex flex-col gap-4 p-6 text-lg font-medium">
+    <li><a href="#" class="hover:text-blue-500">Home</a></li>
+    <li><a href="#" class="hover:text-blue-500">About</a></li>
+    <li><a href="#" class="hover:text-blue-500">Destinations</a></li>
+    <li><a href="#" class="hover:text-blue-500">Experiences</a></li>
+    <li><a href="#" class="hover:text-blue-500">Contact</a></li>
+  </ul>
+</div>
+
+      <div class="card-section">
+        <img
+          src="https://tripptheme.com/tripp3/wp-content/uploads/2023/03/personal-cover.jpg"
+          alt=""
+        />
+        <div class="card-overlay">
+          <h3>Join me on my journey</h3>
+          <svg
+            class="wave-line"
+            width="45.7"
+            height="9.8"
+            viewBox="0 0 31.7 4.8"
+          >
+            <path
+              d="m25.5,4.8c-1.7,0-2.6-.9-3.3-1.5-.6-.6-.9-.8-1.6-.8s-1,.3-1.6.8c-.7.6-1.6,1.5-3.3,1.5s-2.6-.9-3.3-1.5c-.6-.6-.9-.8-1.6-.8s-1,.3-1.6.8c-.7.6-1.6,1.5-3.3,1.5s-2.4-.9-3.1-1.5c-.6-.6-.9-.9-1.6-.9S0,1.9,0,1.2.5,0,1.2,0c1.7,0,2.6.9,3.3,1.5.6.6.9.9,1.6.9s1-.3,1.6-.8c.7-.6,1.6-1.5,3.3-1.5s2.6.9,3.3,1.5c.5.5.8.8,1.5.8s1-.3,1.6-.8c.7-.6,1.6-1.5,3.3-1.5s2.6.9,3.3,1.5c.6.6.9.8,1.6.8s1-.3,1.6-.8c.7-.6,1.6-1.5,3.3-1.5.7,0,1.2.5,1.2,1.2s-.7,1.1-1.3,1.1c-.7,0-1,.3-1.6.8-.7.7-1.6,1.6-3.3,1.6Z"
+            ></path>
+          </svg>
+          <h1>Experience the World</h1>
+          <h2>Create Memories for a Lifetime.</h2>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="slider-wrapper">
+        <button class="slider-btn prev">❮</button>
+        <div class="cards-container1">
+          <div class="card-section1">
+            <img
+              src="https://tripptheme.com/tripp3/wp-content/uploads/2022/12/post-38-720x720.jpg"
+              alt=""
+            />
+            <div class="card-overlay1">
+              <h3>A Photographic Journey of Greece’s Most Beautiful Beaches</h3>
+              <p>Greek</p>
+            </div>
+          </div>
+          <div class="card-section1">
+            <img
+              src="https://tripptheme.com/tripp3/wp-content/uploads/2023/01/post-12-720x720.jpg"
+              alt=""
+            />
+            <div class="card-overlay1">
+              <h3>Discover its Natural Wonders on a Road Trip Adventure</h3>
+              <p>Canada</p>
+            </div>
+          </div>
+          <div class="card-section1">
+            <img
+              src="https://tripptheme.com/tripp3/wp-content/uploads/2023/01/post-13-720x720.jpg"
+              alt=""
+            />
+            <div class="card-overlay1">
+              <h3>
+                A Nature Lover’s Guide to the Best Places to Visit in New South
+                Wales
+              </h3>
+              <p>Australia</p>
+            </div>
+          </div>
+          <div class="card-section1">
+            <img
+              src="https://tripptheme.com/tripp3/wp-content/uploads/2023/02/post-43-2-720x720.jpg"
+              alt=""
+            />
+            <div class="card-overlay1">
+              <h3>Chasing the Midnight Sun in Norway</h3>
+              <p>Norway</p>
+            </div>
+          </div>
+          <div class="card-section1">
+            <img
+              src="https://tripptheme.com/tripp3/wp-content/uploads/2023/01/post-19-1440x1440.jpg"
+              alt=""
+            />
+            <div class="card-overlay1">
+              <h3>Hidden Waterfalls of Iceland You Must See</h3>
+              <p>Iceland</p>
+            </div>
+          </div>
+          <div class="card-section1">
+            <img
+              src="https://tripptheme.com/tripp3/wp-content/uploads/2023/01/picture-21-4-720x720.jpg"
+              alt=""
+            />
+            <div class="card-overlay1">
+              <h3>Wildlife Safari Adventures in South Africa</h3>
+              <p>South Africa</p>
+            </div>
+          </div>
+          <div class="card-section1">
+            <img
+              src="https://tripptheme.com/tripp3/wp-content/uploads/2023/02/post-39-720x720.jpg"
+              alt=""
+            />
+            <div class="card-overlay1">
+              <h3>The Untouched Beauty of Patagonia</h3>
+              <p>Argentina</p>
+            </div>
+          </div>
+          <div class="card-section1">
+            <img
+              src="https://tripptheme.com/tripp3/wp-content/uploads/2023/01/post-22-720x720.jpg"
+              alt=""
+            />
+            <div class="card-overlay1">
+              <h3>Island Hopping in the Philippines</h3>
+              <p>Italy</p>
+            </div>
+          </div>
+          <div class="card-section1">
+            <img
+              src="https://tripptheme.com/tripp3/wp-content/uploads/2023/02/post-37-720x720.jpg"
+              alt=""
+            />
+            <div class="card-overlay1">
+              <h3>Exploring the Deserts of Dubai in Style</h3>
+              <p>Egypt</p>
+            </div>
+          </div>
+        </div>
+        <button class="slider-btn next">❯</button>
+      </div>
+    </section>
+
+    <section class="banner-section bg-white">
+      <div class="banner"></div>
+    </section>
+
+    <section class="travel-deal-section bg-white">
+      <p class="section-subtitle2 text-black">Special Offers</p>
+      <h2 class="section-title2 text-black">Travel Deals & Coupons</h2>
+      <div class="travel-cards-container">
+        <div class="travel-card">
+          <img
+            src="https://tripptheme.com/tripp5/wp-content/uploads/2023/01/post-09-2-960x1280.jpg"
+            alt="Travel Deal"
+          />
+          <div class="travel-card-text">
+            <div class="travel-card-header">
+              <div class="travel-card-title">
+                <h4>Japan</h4>
+                <p>
+                  Exploring Japan’s Cultural Beauty During Cherry Blossom Season
+                </p>
+              </div>
+              <div class="travel-card-icons">
+                <div class="travel-icons-rating">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#FFFF55"
+                    >
+                      <path
+                        d="m352-293 128-76 129 76-34-144 111-95-147-13-59-137-59 137-147 13 112 95-34 144ZM243-144l63-266L96-589l276-24 108-251 108 252 276 23-210 179 63 266-237-141-237 141Zm237-333Z"
+                      />
+                    </svg>
+                    4.6
+                  </span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="M480-312q70 0 119-49t49-119q0-70-49-119t-119-49q-70 0-119 49t-49 119q0 70 49 119t119 49Zm0-72q-40 0-68-28t-28-68q0-40 28-68t68-28q40 0 68 28t28 68q0 40-28 68t-68 28Zm0 192q-142.6 0-259.8-78.5Q103-349 48-480q55-131 172.2-209.5Q337.4-768 480-768q142.6 0 259.8 78.5Q857-611 912-480q-55 131-172.2 209.5Q622.6-192 480-192Zm0-288Zm0 216q112 0 207-58t146-158q-51-100-146-158t-207-58q-112 0-207 58T127-480q51 100 146 158t207 58Z"
+                      />
+                    </svg>
+                    356
+                  </span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="M240-384h336v-72H240v72Zm0-132h480v-72H240v72Zm0-132h480v-72H240v72ZM96-96v-696q0-29.7 21.15-50.85Q138.3-864 168-864h624q29.7 0 50.85 21.15Q864-821.7 864-792v480q0 29.7-21.15 50.85Q821.7-240 792-240H240L96-96Zm114-216h582v-480H168v522l42-42Zm-42 0v-480 480Z"
+                      />
+                    </svg>
+                    0
+                  </span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z"
+                      />
+                    </svg>
+                    151
+                  </span>
+                </div>
+                <span
+                  style="
+                    display: flex;
+                    align-items: center;
+                    border-radius: 50%;
+                    height: 32px;
+                    width: 32px;
+                  "
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="20px"
+                    viewBox="0 -960 960 960"
+                    width="20px"
+                    fill="#000"
+                  >
+                    <path
+                      d="M648-96q-50 0-85-35t-35-85q0-9 4-29L295-390q-16 14-36.05 22-20.04 8-42.95 8-50 0-85-35t-35-85q0-50 35-85t85-35q23 0 43 8t36 22l237-145q-2-7-3-13.81-1-6.81-1-15.19 0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-23 0-43-8t-36-22L332-509q2 7 3 13.81 1 6.81 1 15.19 0 8.38-1 15.19-1 6.81-3 13.81l237 145q16-14 36.05-22 20.04-8 42.95-8 50 0 85 35t35 85q0 50-35 85t-85 35Zm0-72q20.4 0 34.2-13.8Q696-195.6 696-216q0-20.4-13.8-34.2Q668.4-264 648-264q-20.4 0-34.2 13.8Q600-236.4 600-216q0 20.4 13.8 34.2Q627.6-168 648-168ZM216-432q20.4 0 34.2-13.8Q264-459.6 264-480q0-20.4-13.8-34.2Q236.4-528 216-528q-20.4 0-34.2 13.8Q168-500.4 168-480q0 20.4 13.8 34.2Q195.6-432 216-432Zm432-264q20.4 0 34.2-13.8Q696-723.6 696-744q0-20.4-13.8-34.2Q668.4-792 648-792q-20.4 0-34.2 13.8Q600-764.4 600-744q0 20.4 13.8 34.2Q627.6-696 648-696Zm0 480ZM216-480Zm432-264Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="travel-card">
+          <img
+            src="https://tripptheme.com/tripp5/wp-content/uploads/2023/01/post-10-960x1280.jpg"
+            alt="Travel Deal"
+          />
+          <div class="travel-card-text">
+            <div class="travel-card-header">
+              <div class="travel-card-title">
+                <h4>Norway</h4>
+                <p>Witnessing the Magic of the Aurora Borealis in Norway</p>
+              </div>
+              <div class="travel-card-icons">
+                <div class="travel-icons-rating">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#FFFF55"
+                    >
+                      <path
+                        d="m352-293 128-76 129 76-34-144 111-95-147-13-59-137-59 137-147 13 112 95-34 144ZM243-144l63-266L96-589l276-24 108-251 108 252 276 23-210 179 63 266-237-141-237 141Zm237-333Z"
+                      />
+                    </svg>
+                    4.7
+                  </span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="M480-312q70 0 119-49t49-119q0-70-49-119t-119-49q-70 0-119 49t-49 119q0 70 49 119t119 49Zm0-72q-40 0-68-28t-28-68q0-40 28-68t68-28q40 0 68 28t28 68q0 40-28 68t-68 28Zm0 192q-142.6 0-259.8-78.5Q103-349 48-480q55-131 172.2-209.5Q337.4-768 480-768q142.6 0 259.8 78.5Q857-611 912-480q-55 131-172.2 209.5Q622.6-192 480-192Zm0-288Zm0 216q112 0 207-58t146-158q-51-100-146-158t-207-58q-112 0-207 58T127-480q51 100 146 158t207 58Z"
+                      />
+                    </svg>
+                    500
+                  </span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="M240-384h336v-72H240v72Zm0-132h480v-72H240v72Zm0-132h480v-72H240v72ZM96-96v-696q0-29.7 21.15-50.85Q138.3-864 168-864h624q29.7 0 50.85 21.15Q864-821.7 864-792v480q0 29.7-21.15 50.85Q821.7-240 792-240H240L96-96Zm114-216h582v-480H168v522l42-42Zm-42 0v-480 480Z"
+                      />
+                    </svg>
+                    0
+                  </span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z"
+                      />
+                    </svg>
+                    306
+                  </span>
+                </div>
+                <span
+                  style="
+                    display: flex;
+                    align-items: center;
+                    border-radius: 50%;
+                    height: 32px;
+                    width: 32px;
+                  "
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="20px"
+                    viewBox="0 -960 960 960"
+                    width="20px"
+                    fill="#000"
+                  >
+                    <path
+                      d="M648-96q-50 0-85-35t-35-85q0-9 4-29L295-390q-16 14-36.05 22-20.04 8-42.95 8-50 0-85-35t-35-85q0-50 35-85t85-35q23 0 43 8t36 22l237-145q-2-7-3-13.81-1-6.81-1-15.19 0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-23 0-43-8t-36-22L332-509q2 7 3 13.81 1 6.81 1 15.19 0 8.38-1 15.19-1 6.81-3 13.81l237 145q16-14 36.05-22 20.04-8 42.95-8 50 0 85 35t35 85q0 50-35 85t-85 35Zm0-72q20.4 0 34.2-13.8Q696-195.6 696-216q0-20.4-13.8-34.2Q668.4-264 648-264q-20.4 0-34.2 13.8Q600-236.4 600-216q0 20.4 13.8 34.2Q627.6-168 648-168ZM216-432q20.4 0 34.2-13.8Q264-459.6 264-480q0-20.4-13.8-34.2Q236.4-528 216-528q-20.4 0-34.2 13.8Q168-500.4 168-480q0 20.4 13.8 34.2Q195.6-432 216-432Zm432-264q20.4 0 34.2-13.8Q696-723.6 696-744q0-20.4-13.8-34.2Q668.4-792 648-792q-20.4 0-34.2 13.8Q600-764.4 600-744q0 20.4 13.8 34.2Q627.6-696 648-696Zm0 480ZM216-480Zm432-264Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="travel-card">
+          <img
+            src="https://tripptheme.com/tripp5/wp-content/uploads/2023/01/post-02-2-960x1280.jpg"
+            alt="Travel Deal"
+          />
+          <div class="travel-card-text">
+            <div class="travel-card-header">
+              <div class="travel-card-title">
+                <h4>Australia</h4>
+                <p>Scenice View of Lake Wanaka in Summertime</p>
+              </div>
+              <div class="travel-card-icons">
+                <div class="travel-icons-rating">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#FFFF55"
+                    >
+                      <path
+                        d="m352-293 128-76 129 76-34-144 111-95-147-13-59-137-59 137-147 13 112 95-34 144ZM243-144l63-266L96-589l276-24 108-251 108 252 276 23-210 179 63 266-237-141-237 141Zm237-333Z"
+                      />
+                    </svg>
+                    4.8
+                  </span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="M480-312q70 0 119-49t49-119q0-70-49-119t-119-49q-70 0-119 49t-49 119q0 70 49 119t119 49Zm0-72q-40 0-68-28t-28-68q0-40 28-68t68-28q40 0 68 28t28 68q0 40-28 68t-68 28Zm0 192q-142.6 0-259.8-78.5Q103-349 48-480q55-131 172.2-209.5Q337.4-768 480-768q142.6 0 259.8 78.5Q857-611 912-480q-55 131-172.2 209.5Q622.6-192 480-192Zm0-288Zm0 216q112 0 207-58t146-158q-51-100-146-158t-207-58q-112 0-207 58T127-480q51 100 146 158t207 58Z"
+                      />
+                    </svg>
+                    400
+                  </span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="M240-384h336v-72H240v72Zm0-132h480v-72H240v72Zm0-132h480v-72H240v72ZM96-96v-696q0-29.7 21.15-50.85Q138.3-864 168-864h624q29.7 0 50.85 21.15Q864-821.7 864-792v480q0 29.7-21.15 50.85Q821.7-240 792-240H240L96-96Zm114-216h582v-480H168v522l42-42Zm-42 0v-480 480Z"
+                      />
+                    </svg>
+                    0
+                  </span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z"
+                      />
+                    </svg>
+                    234
+                  </span>
+                </div>
+                <span
+                  style="
+                    display: flex;
+                    align-items: center;
+                    border-radius: 50%;
+                    height: 32px;
+                    width: 32px;
+                  "
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="20px"
+                    viewBox="0 -960 960 960"
+                    width="20px"
+                    fill="#000"
+                  >
+                    <path
+                      d="M648-96q-50 0-85-35t-35-85q0-9 4-29L295-390q-16 14-36.05 22-20.04 8-42.95 8-50 0-85-35t-35-85q0-50 35-85t85-35q23 0 43 8t36 22l237-145q-2-7-3-13.81-1-6.81-1-15.19 0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-23 0-43-8t-36-22L332-509q2 7 3 13.81 1 6.81 1 15.19 0 8.38-1 15.19-1 6.81-3 13.81l237 145q16-14 36.05-22 20.04-8 42.95-8 50 0 85 35t35 85q0 50-35 85t-85 35Zm0-72q20.4 0 34.2-13.8Q696-195.6 696-216q0-20.4-13.8-34.2Q668.4-264 648-264q-20.4 0-34.2 13.8Q600-236.4 600-216q0 20.4 13.8 34.2Q627.6-168 648-168ZM216-432q20.4 0 34.2-13.8Q264-459.6 264-480q0-20.4-13.8-34.2Q236.4-528 216-528q-20.4 0-34.2 13.8Q168-500.4 168-480q0 20.4 13.8 34.2Q195.6-432 216-432Zm432-264q20.4 0 34.2-13.8Q696-723.6 696-744q0-20.4-13.8-34.2Q668.4-792 648-792q-20.4 0-34.2 13.8Q600-764.4 600-744q0 20.4 13.8 34.2Q627.6-696 648-696Zm0 480ZM216-480Zm432-264Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="see-all-btn bg-white ">See All +</button>
+    </section>
+
+    <section class="countries-section bg-white">
+      <p class="section-subtitle text-black">Start Exploring</p>
+      <h2 class="section-title text-black">Destinations</h2>
+      <div class="countries-grid2">
+        <div class="country-card2">
+          <img
+            src="https://tripptheme.com/tripp5/wp-content/uploads/2023/01/destination-01-600x600.jpg"
+            alt="Africa"
+          />
+          <p class="country-name light-blue">Africa</p>
+        </div>
+        <div class="country-card2">
+          <img
+            src="https://tripptheme.com/tripp3/wp-content/uploads/2023/02/destination-06-h-360x360.jpg"
+            alt="Africa"
+          />
+          <p class="country-name light-blue">South Amercia</p>
+        </div>
+        <div class="country-card2">
+          <img
+            src="https://tripptheme.com/tripp5/wp-content/uploads/2023/01/destination-02-600x600.jpg"
+            alt="Asia"
+          />
+          <p class="country-name">Asia</p>
+        </div>
+        <div class="country-card2">
+          <img
+            src="https://tripptheme.com/tripp5/wp-content/uploads/2023/01/destination-03-600x600.jpg"
+            alt="Europe"
+          />
+          <p class="country-name">Europe</p>
+        </div>
+        <div class="country-card2">
+          <img
+            src="https://tripptheme.com/tripp5/wp-content/uploads/2023/02/destination-04-3-600x600.jpg"
+            alt="North Amercia"
+          />
+          <p class="country-name">North Amercia</p>
+        </div>
+        <div class="country-card2">
+          <img
+            src="https://tripptheme.com/tripp5/wp-content/uploads/2023/02/destination-05-600x600.jpg"
+            alt="Oceania"
+          />
+          <p class="country-name">Oceania</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="travel-deal-section bg-white">
+      <p class="section-subtitle3 text-black">Most Recent Posts</p>
+      <h2 class="section-title3 text-black">The Latest Inspiring Stories</h2>
+
+      <div class="grid grid-cols-2 gap-10">
+        <div class="flex flex-col gap-10 ">
+          <div class="travel-card">
+            <img
+              class="image1"
+              src="https://tripptheme.com/tripp5/wp-content/uploads/2023/01/post-09-2-960x1280.jpg"
+              alt="Travel Deal"
+            />
+            <div class="travel-card-text">
+              <div class="travel-card-header">
+                <div class="travel-card-title">
+                  <h4>Japan</h4>
+                  <p>
+                    Exploring Japan’s Cultural Beauty During Cherry Blossom
+                    Season
+                  </p>
+                </div>
+                <div class="travel-card-icons">
+                  <div class="travel-icons-rating">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20px"
+                        viewBox="0 -960 960 960"
+                        width="20px"
+                        fill="#FFFF55"
+                      >
+                        <path
+                          d="m352-293 128-76 129 76-34-144 111-95-147-13-59-137-59 137-147 13 112 95-34 144ZM243-144l63-266L96-589l276-24 108-251 108 252 276 23-210 179 63 266-237-141-237 141Zm237-333Z"
+                        />
+                      </svg>
+                      4.6
+                    </span>
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20px"
+                        viewBox="0 -960 960 960"
+                        width="20px"
+                        fill="#000000"
+                      >
+                        <path
+                          d="M480-312q70 0 119-49t49-119q0-70-49-119t-119-49q-70 0-119 49t-49 119q0 70 49 119t119 49Zm0-72q-40 0-68-28t-28-68q0-40 28-68t68-28q40 0 68 28t28 68q0 40-28 68t-68 28Zm0 192q-142.6 0-259.8-78.5Q103-349 48-480q55-131 172.2-209.5Q337.4-768 480-768q142.6 0 259.8 78.5Q857-611 912-480q-55 131-172.2 209.5Q622.6-192 480-192Zm0-288Zm0 216q112 0 207-58t146-158q-51-100-146-158t-207-58q-112 0-207 58T127-480q51 100 146 158t207 58Z"
+                        />
+                      </svg>
+                      356
+                    </span>
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20px"
+                        viewBox="0 -960 960 960"
+                        width="20px"
+                        fill="#000000"
+                      >
+                        <path
+                          d="M240-384h336v-72H240v72Zm0-132h480v-72H240v72Zm0-132h480v-72H240v72ZM96-96v-696q0-29.7 21.15-50.85Q138.3-864 168-864h624q29.7 0 50.85 21.15Q864-821.7 864-792v480q0 29.7-21.15 50.85Q821.7-240 792-240H240L96-96Zm114-216h582v-480H168v522l42-42Zm-42 0v-480 480Z"
+                        />
+                      </svg>
+                      0
+                    </span>
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20px"
+                        viewBox="0 -960 960 960"
+                        width="20px"
+                        fill="#000000"
+                      >
+                        <path
+                          d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z"
+                        />
+                      </svg>
+                      151
+                    </span>
+                  </div>
+                  <span
+                    style="
+                      display: flex;
+                      align-items: center;
+                      border-radius: 50%;
+                      height: 32px;
+                      width: 32px;
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#000"
+                    >
+                      <path
+                        d="M648-96q-50 0-85-35t-35-85q0-9 4-29L295-390q-16 14-36.05 22-20.04 8-42.95 8-50 0-85-35t-35-85q0-50 35-85t85-35q23 0 43 8t36 22l237-145q-2-7-3-13.81-1-6.81-1-15.19 0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-23 0-43-8t-36-22L332-509q2 7 3 13.81 1 6.81 1 15.19 0 8.38-1 15.19-1 6.81-3 13.81l237 145q16-14 36.05-22 20.04-8 42.95-8 50 0 85 35t35 85q0 50-35 85t-85 35Zm0-72q20.4 0 34.2-13.8Q696-195.6 696-216q0-20.4-13.8-34.2Q668.4-264 648-264q-20.4 0-34.2 13.8Q600-236.4 600-216q0 20.4 13.8 34.2Q627.6-168 648-168ZM216-432q20.4 0 34.2-13.8Q264-459.6 264-480q0-20.4-13.8-34.2Q236.4-528 216-528q-20.4 0-34.2 13.8Q168-500.4 168-480q0 20.4 13.8 34.2Q195.6-432 216-432Zm432-264q20.4 0 34.2-13.8Q696-723.6 696-744q0-20.4-13.8-34.2Q668.4-792 648-792q-20.4 0-34.2 13.8Q600-764.4 600-744q0 20.4 13.8 34.2Q627.6-696 648-696Zm0 480ZM216-480Zm432-264Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="travel-card">
+            <img
+              class="image1"
+              src="https://tripptheme.com/tripp5/wp-content/uploads/2023/01/post-10-960x1280.jpg"
+              alt="Travel Deal"
+            />
+            <div class="travel-card-text">
+              <div class="travel-card-header">
+                <div class="travel-card-title">
+                  <h4>Norway</h4>
+                  <p>Witnessing the Magic of the Aurora Borealis in Norway</p>
+                </div>
+                <div class="travel-card-icons">
+                  <div class="travel-icons-rating">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20px"
+                        viewBox="0 -960 960 960"
+                        width="20px"
+                        fill="#FFFF55"
+                      >
+                        <path
+                          d="m352-293 128-76 129 76-34-144 111-95-147-13-59-137-59 137-147 13 112 95-34 144ZM243-144l63-266L96-589l276-24 108-251 108 252 276 23-210 179 63 266-237-141-237 141Zm237-333Z"
+                        />
+                      </svg>
+                      4.7
+                    </span>
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20px"
+                        viewBox="0 -960 960 960"
+                        width="20px"
+                        fill="#000000"
+                      >
+                        <path
+                          d="M480-312q70 0 119-49t49-119q0-70-49-119t-119-49q-70 0-119 49t-49 119q0 70 49 119t119 49Zm0-72q-40 0-68-28t-28-68q0-40 28-68t68-28q40 0 68 28t28 68q0 40-28 68t-68 28Zm0 192q-142.6 0-259.8-78.5Q103-349 48-480q55-131 172.2-209.5Q337.4-768 480-768q142.6 0 259.8 78.5Q857-611 912-480q-55 131-172.2 209.5Q622.6-192 480-192Zm0-288Zm0 216q112 0 207-58t146-158q-51-100-146-158t-207-58q-112 0-207 58T127-480q51 100 146 158t207 58Z"
+                        />
+                      </svg>
+                      500
+                    </span>
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20px"
+                        viewBox="0 -960 960 960"
+                        width="20px"
+                        fill="#000000"
+                      >
+                        <path
+                          d="M240-384h336v-72H240v72Zm0-132h480v-72H240v72Zm0-132h480v-72H240v72ZM96-96v-696q0-29.7 21.15-50.85Q138.3-864 168-864h624q29.7 0 50.85 21.15Q864-821.7 864-792v480q0 29.7-21.15 50.85Q821.7-240 792-240H240L96-96Zm114-216h582v-480H168v522l42-42Zm-42 0v-480 480Z"
+                        />
+                      </svg>
+                      0
+                    </span>
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20px"
+                        viewBox="0 -960 960 960"
+                        width="20px"
+                        fill="#000000"
+                      >
+                        <path
+                          d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z"
+                        />
+                      </svg>
+                      306
+                    </span>
+                  </div>
+                  <span
+                    style="
+                      display: flex;
+                      align-items: center;
+                      border-radius: 50%;
+                      height: 32px;
+                      width: 32px;
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#000"
+                    >
+                      <path
+                        d="M648-96q-50 0-85-35t-35-85q0-9 4-29L295-390q-16 14-36.05 22-20.04 8-42.95 8-50 0-85-35t-35-85q0-50 35-85t85-35q23 0 43 8t36 22l237-145q-2-7-3-13.81-1-6.81-1-15.19 0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-23 0-43-8t-36-22L332-509q2 7 3 13.81 1 6.81 1 15.19 0 8.38-1 15.19-1 6.81-3 13.81l237 145q16-14 36.05-22 20.04-8 42.95-8 50 0 85 35t35 85q0 50-35 85t-85 35Zm0-72q20.4 0 34.2-13.8Q696-195.6 696-216q0-20.4-13.8-34.2Q668.4-264 648-264q-20.4 0-34.2 13.8Q600-236.4 600-216q0 20.4 13.8 34.2Q627.6-168 648-168ZM216-432q20.4 0 34.2-13.8Q264-459.6 264-480q0-20.4-13.8-34.2Q236.4-528 216-528q-20.4 0-34.2 13.8Q168-500.4 168-480q0 20.4 13.8 34.2Q195.6-432 216-432Zm432-264q20.4 0 34.2-13.8Q696-723.6 696-744q0-20.4-13.8-34.2Q668.4-792 648-792q-20.4 0-34.2 13.8Q600-764.4 600-744q0 20.4 13.8 34.2Q627.6-696 648-696Zm0 480ZM216-480Zm432-264Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-10">
+
+        <div class="flex flex-col gap-10">
+          <div
+            class="bg-black text-white rounded-lg shadow-lg overflow-hidden w-full max-w-2xl flex"
+          >
+            <div class="">
+              <img
+                src="https://tripptheme.com/tripp3/wp-content/uploads/2023/01/post-02-720x720.jpg"
+                alt="Beachside"
+                class="w-[325px] h-[325px] object-cover"
+              />
+            </div>
+            <div class="px-4 py-2.5 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start">
+                  <span class="text-yellow-500 text-xl">🌴</span>
+                  <span class="ml-2 text-gray-600">Australia</span>
+                </div>
+                <h2 class="text-lg font-bold mt-2">
+                  Beautiful Long Beachside and Very Smooth Sand
+                </h2>
+              </div>
+              <div class="flex items-center space-x-4 mt-4">
+                <span class="text-yellow-500">★ 9.5</span>
+                <span class="text-gray-500">👀 720</span>
+                <span class="text-gray-500">👍 0</span>
+                <span class="text-red-500">❤️ 185</span>
+                <span class="text-gray-500">🔗</span>
+              </div>
+            </div>
+          </div>
+
+           <div
+            class="bg-black text-white rounded-lg shadow-lg overflow-hidden w-full max-w-2xl flex"
+          >
+            <div class="">
+              <img
+                src="https://tripptheme.com/tripp3/wp-content/uploads/2023/01/post-03-2-720x720.jpg"
+                alt="Beachside"
+                class="w-[325px] h-[325px] object-cover"
+              />
+            </div>
+            <div class="px-4 py-2.5 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start">
+                  <span class="text-yellow-500 text-xl">🌴</span>
+                  <span class="ml-2 text-gray-600">Norway</span>
+                </div>
+                <h2 class="text-lg font-bold mt-2">
+                  Beautiful Long Beachside and Very Smooth Sand
+                </h2>
+              </div>
+              <div class="flex items-center space-x-4 mt-4">
+                <span class="text-yellow-500">★ 9.5</span>
+                <span class="text-gray-500">👀 720</span>
+                <span class="text-gray-500">👍 0</span>
+                <span class="text-red-500">❤️ 185</span>
+                <span class="text-gray-500">🔗</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-10 pt-3 ">
+          <div
+            class="bg-black rounded-lg shadow-lg overflow-hidden w-full max-w-2xl flex text-white"
+          >
+            <div class="">
+              <img
+                src="https://tripptheme.com/tripp3/wp-content/uploads/2023/01/post-08-2-720x720.jpg"
+                alt="Beachside"
+                class="w-[325px] h-[325px] object-cover"
+              />
+            </div>
+            <div class="px-4 py-2.5 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start">
+                  <span class="text-yellow-500 text-xl">🌴</span>
+                  <span class="ml-2 text-gray-600">Hawaii</span>
+                </div>
+                <h2 class="text-lg font-bold mt-2">
+                  Beautiful Long Beachside and Very Smooth Sand
+                </h2>
+              </div>
+              <div class="flex items-center space-x-4 mt-4">
+                <span class="text-yellow-500">★ 9.5</span>
+                <span class="text-gray-500">👀 720</span>
+                <span class="text-gray-500">👍 0</span>
+                <span class="text-red-500">❤️ 185</span>
+                <span class="text-gray-500">🔗</span>
+              </div>
+            </div>
+          </div>
+
+           <div
+            class="bg-black rounded-lg shadow-lg overflow-hidden w-full max-w-2xl flex text-white"
+          >
+            <div class="">
+              <img
+                src="https://tripptheme.com/tripp3/wp-content/uploads/2023/01/post-06-720x720.jpg"
+                alt="Beachside"
+                class="w-[325px] h-[325px] object-cover"
+              />
+            </div>
+            <div class="px-4 py-2.5 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start">
+                  <span class="text-yellow-500 text-xl">🌴</span>
+                  <span class="ml-2 text-gray-600">Italy</span>
+                </div>
+                <h2 class="text-lg font-bold mt-2">
+                  Beautiful Long Beachside and Very Smooth Sand
+                </h2>
+              </div>
+              <div class="flex items-center space-x-4 mt-4">
+                <span class="text-yellow-500">★ 9.5</span>
+                <span class="text-gray-500">👀 720</span>
+                <span class="text-gray-500">👍 0</span>
+                <span class="text-red-500">❤️ 185</span>
+                <span class="text-gray-500">🔗</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+<footer class="bg-[#ffff] text-white py-10">
+  <div class="max-w-screen-xl mx-auto px-4">
+    <!-- Follow Us Section -->
+    <div>
+      <h2 class="text-xl font-semibold mb-4 pl-16 text-black">Follow Us</h2>
+
+      <!-- Image Grid -->
+      <div class="flex flex-wrap gap-3 mb-6 pl-16  " >
+        <!-- Replace src with your image URLs -->
+        <img   class=" w-[130px] h-[130px] rounded-lg"    src="https://scontent.cdninstagram.com/v/t51.2885-15/71774224_1120529718336543_4445397804671013641_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=1-7&_nc_sid=18de74&_nc_ohc=4lxUZyFe114Q7kNvwHhZxJS&_nc_oc=AdkzT0dVwCFKaO51-dfEk0XTyRJr4oGydaKZF4cyb3VSFcSORJ24t_lMCqnSzCzPgkInUUfqWfet-XnJVf1-D_JS&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfSs-asm10io6kKlUhHCfCnb0AmGxPLLw7TZACB6Ebow5Q&oe=687E8AAF" alt="Instagram" class="w-24 h-24 object-cover rounded-xl" />
+        <img   class=" w-[130px] h-[130px] rounded-lg"   src="https://scontent.cdninstagram.com/v/t51.2885-15/71086426_2152062144899001_2471215601910821295_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ccb=1-7&_nc_sid=18de74&_nc_ohc=GP-h3iRxQrQQ7kNvwFSZSkq&_nc_oc=AdlMZiUYK1fqyjWc-TrBImm8mzo07QKvm1oX946ZXxjylhS1OlKKJ_Yh5yeT5TcHDy7gJFVq4LN_1kOje3M62d_a&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfTeX7xsFw0dTt9gmUhxktFnnGX9b5mdw7BOBvnt2cQOMA&oe=687E9C3E" alt="Instagram" class="w-24 h-24 object-cover rounded-xl" />
+        <img class=" w-[130px] h-[130px] rounded-lg"  src="https://scontent.cdninstagram.com/v/t51.2885-15/70503560_170304390771931_9178601245749636642_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=1-7&_nc_sid=18de74&_nc_ohc=J3RDrNI7ayEQ7kNvwGPj8AY&_nc_oc=Adnbt6RieTb_r_7i_NXghjhBx9YJV9TfPwkUHtMNFkEkqccq4oUGOgUBVsVQYhguFR6_h2tr1JxrNVxe_HSOsh_F&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfRRKQSpfrRITW_dReDYVXe-_ZjnTzoQH3zR08CVDUttRg&oe=687EA5AD" alt="Instagram" class="w-24 h-24 object-cover rounded-xl" />
+        <img class=" w-[130px] h-[130px] rounded-lg"  src="https://scontent.cdninstagram.com/v/t51.2885-15/69707354_148721199704912_7304258997643999963_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=1-7&_nc_sid=18de74&_nc_ohc=85cgK-GUwz8Q7kNvwHUzxCC&_nc_oc=Adlyxj6hv9-1AU6pU5IkUhB2InmxzGxDB_K7aM0QZTYX_5EfKjD3ruwFXPRAhxCivAot517FMw9GONCQJu35eYI0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfRea3GlU4PHusioKalja32p0hhmYLxOhhwR48uzDXH3WQ&oe=687EAD95" alt="Instagram" class="w-24 h-24 object-cover rounded-xl" />
+        <img class=" w-[130px] h-[130px] rounded-lg"  src="https://scontent.cdninstagram.com/v/t51.2885-15/69179458_499054100655395_8387111639899338101_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=I0eVLd4tBpEQ7kNvwGg0AFr&_nc_oc=Adlx3WL8f1clPEUaorLimUGPJD7wvKpoTsHFnnvuiWS7kc48-3lNH5dDfqMo8ZOijzwG-n4M4EbDAWFIKU4UUgOg&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfRbd07fTR6vXi8rSAzXHF98vpwehz6ZBYbaqFU7oLEnIw&oe=687EA8A1" alt="Instagram" class="w-24 h-24 object-cover rounded-xl" />
+        <img class=" w-[130px] h-[130px] rounded-lg"  src="https://scontent.cdninstagram.com/v/t51.2885-15/70552297_442356779718516_9028961796222010989_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ccb=1-7&_nc_sid=18de74&_nc_ohc=KSCqahgAsQgQ7kNvwH8x3jD&_nc_oc=Adm4pG1_YZZ56zVnHnCJVo1XgYeNmxzKHw09kv8TWF9JWimNE0g0Bu-Ptd1QbRpLVpM78wiF9o3pJNYcYOkhIwZ6&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfQrKTKGI6O-wYHZbcpK3ebpnc8Qz1jqOUHx2g8Y-hV56w&oe=687EABEE" alt="Instagram" class="w-24 h-24 object-cover rounded-xl" />
+        <img  class=" w-[130px] h-[130px] rounded-lg" src="https://scontent.cdninstagram.com/v/t51.2885-15/70109305_922479638105173_3070260895648685600_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=eEWjksokbGcQ7kNvwG8Zp20&_nc_oc=Adm9PS3Z8joR52CQ232NLDqfYL1MsIW7YziXCDvypfT6J5QB3PYijNfKU_v-kNWaWqlLkx129I8vneCJMB-LDJ8x&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfR77R3XApA8aCeY9EeQWfmZ49AviqDsyeCp04EV0bGhBw&oe=687EA2C5" alt="Instagram" class="w-24 h-24 object-cover rounded-xl" />
+        <img class=" w-[130px] h-[130px] rounded-lg"  src="https://scontent.cdninstagram.com/v/t51.2885-15/67952359_316619845836830_3882965802307689547_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ccb=1-7&_nc_sid=18de74&_nc_ohc=_zcCOeNve2EQ7kNvwGn8Pe3&_nc_oc=AdmgL9Y69-pp7LOiLc-f3yk50sWlC1_A8Ywmsqm6Fcus8DB1AhS52Z_MQrXpUXeV481l7G2vTOYfGBIkXyICfYd9&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfR4vhHANphVFM_ScEhcZdFSw0pFRTPk4uVR0h9I7qkLkQ&oe=687E9FD7" alt="Instagram" class="w-24 h-24 object-cover rounded-xl" />
+ </div>
+
+      <!-- Instagram Handle -->
+      <div class="flex items-center  gap-2 mb-4 pr-16 flex justify-end  ">
+        <svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm6.5-.25a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zM12 9.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"/>
+        </svg>
+        <span class="font-semibold text-lg text-black">wydethemes</span>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="flex gap-4">
+        <!-- YouTube -->
+        <a href="#" class="bg-[#222] p-3 rounded-full hover:bg-white hover:text-black transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 15l5.19-3L10 9v6zm12-3c0-6.627-5.373-12-12-12S-2 5.373-2 12s5.373 12 12 12 12-5.373 12-12z"/>
+          </svg>
+        </a>
+        <!-- Facebook -->
+        <a href="#" class="bg-[#222] p-3 rounded-full hover:bg-white hover:text-black transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.014 3.676 9.163 8.438 9.877v-6.988h-2.54v-2.889h2.54V9.797c0-2.507 1.493-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.465h-1.261c-1.242 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.889h-2.33v6.988C18.324 21.163 22 17.014 22 12z"/>
+          </svg>
+        </a>
+        <!-- Instagram -->
+        <a href="#" class="bg-[#222] p-3 rounded-full hover:bg-white hover:text-black transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.334 3.608 1.31.974.976 1.247 2.243 1.309 3.609.058 1.264.07 1.644.07 4.848s-.012 3.584-.07 4.849c-.062 1.366-.335 2.633-1.31 3.608-.975.975-2.242 1.248-3.608 1.31-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.335-3.608-1.31-.975-.975-1.248-2.242-1.31-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.849c.062-1.366.335-2.633 1.31-3.608C4.518 2.497 5.785 2.224 7.151 2.162 8.416 2.104 8.796 2.092 12 2.092V2.163zm0 1.837c-3.183 0-3.562.012-4.818.07-1.123.053-1.729.246-2.132.403-.516.196-.887.432-1.28.825-.393.393-.629.764-.825 1.28-.157.403-.35 1.009-.403 2.132-.058 1.256-.07 1.635-.07 4.818s.012 3.562.07 4.818c.053 1.123.246 1.729.403 2.132.196.516.432.887.825 1.28.393.393.764.629 1.28.825.403.157 1.009.35 2.132.403 1.256.058 1.635.07 4.818.07s3.562-.012 4.818-.07c1.123-.053 1.729-.246 2.132-.403.516-.196.887-.432 1.28-.825.393-.393.629-.764.825-1.28.157-.403.35-1.009.403-2.132.058-1.256.07-1.635.07-4.818s-.012-3.562-.07-4.818c-.053-1.123-.246-1.729-.403-2.132-.196-.516-.432-.887-.825-1.28-.393-.393-.764-.629-1.28-.825-.403-.157-1.009-.35-2.132-.403-1.256-.058-1.635-.07-4.818-.07zm0 4.838a5.163 5.163 0 100 10.326 5.163 5.163 0 000-10.326zm0 8.488a3.325 3.325 0 110-6.65 3.325 3.325 0 010 6.65zm6.406-9.613a1.204 1.204 0 11-2.408 0 1.204 1.204 0 012.408 0z"/>
+          </svg>
+        </a>
+        <!-- X (Twitter) -->
+        <a href="#" class="bg-[#222] p-3 rounded-full hover:bg-white hover:text-black transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.37c-.83.49-1.75.84-2.72 1.03a4.28 4.28 0 00-7.29 3.9A12.15 12.15 0 013 5.16a4.28 4.28 0 001.32 5.7 4.26 4.26 0 01-1.94-.54v.05c0 2.05 1.46 3.77 3.4 4.17a4.28 4.28 0 01-1.93.07 4.28 4.28 0 004 2.97A8.58 8.58 0 012 19.54 12.09 12.09 0 008.29 21c7.55 0 11.68-6.26 11.68-11.7 0-.18-.01-.35-.02-.53A8.18 8.18 0 0022.46 6z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="my-8 border-gray-700" />
+
+    <!-- Bottom Links -->
+    <div class="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm  ">
+      <p class="text-black">© 2025 Tripp. Proudly powered by WordPress.</p>
+      <div class="flex gap-6 mt-4 md:mt-0 text-black ">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">Blog</a>
+        <a href="#" class="hover:text-white transition">About</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+        <a href="#" class="hover:text-white transition">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+    <div class="tooltip">
+      <button onclick="scrollToTop()" id="backToTopBtn">↑</button>
+      <span class="tooltip-text">Back to Top</span>
+    </div>
+
+    <script>
+      const container = document.querySelector(".cards-container1");
+      const nextBtn = document.querySelector(".slider-btn.next");
+      const prevBtn = document.querySelector(".slider-btn.prev");
+
+      let scrollAmount = 0;
+      const cardWidth = 320;
+
+      nextBtn.addEventListener("click", () => {
+        container.scrollBy({ left: cardWidth * 4, behavior: "smooth" });
+      });
+
+      prevBtn.addEventListener("click", () => {
+        container.scrollBy({ left: -cardWidth * 4, behavior: "smooth" });
+      });
+
+      window.onscroll = function () {
+        const btn = document.getElementById("backToTopBtn");
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          btn.style.display = "block";
+        } else {
+          btn.style.display = "none";
+        }
+      };
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+
+      const drawer = document.getElementById('drawer');
+  const toggleBtn = document.getElementById('drawer-toggle');
+  const closeBtn = document.getElementById('drawer-close');
+
+  toggleBtn.addEventListener('click', () => {
+    drawer.classList.remove('translate-x-full');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    drawer.classList.add('translate-x-full');
+  });
+
+
+  const searchBtn = document.getElementById("search-btn");
+  const backBtn = document.getElementById("back-btn");
+  const navLinks = document.getElementById("nav-links");
+  const searchInputContainer = document.getElementById("search-input-container");
+
+  searchBtn.addEventListener("click", () => {
+    // Hide search icon, show back
+    searchBtn.classList.add("hidden");
+    backBtn.classList.remove("hidden");
+
+    // Hide nav links, show input
+    navLinks.classList.add("hidden");
+    searchInputContainer.classList.remove("hidden");
+  });
+
+  backBtn.addEventListener("click", () => {
+    // Show search icon, hide back
+    searchBtn.classList.remove("hidden");
+    backBtn.classList.add("hidden");
+
+    // Show nav links, hide input
+    navLinks.classList.remove("hidden");
+    searchInputContainer.classList.add("hidden");
+  });
+    </script>
+  </body>
+</html>
